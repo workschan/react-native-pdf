@@ -237,6 +237,7 @@ public class PdfView extends PDFView implements OnPageChangeListener,OnLoadCompl
                 .pageFling(this.pageFling)
                 .enableAnnotationRendering(this.enableAnnotationRendering)
                 .linkHandler(this)
+                .useBestQuality(true)
                 .load();
 
         }
