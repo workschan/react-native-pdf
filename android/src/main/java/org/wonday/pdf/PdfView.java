@@ -219,6 +219,8 @@ public class PdfView extends PDFView implements OnPageChangeListener,OnLoadCompl
             Constants.Pinch.MINIMUM_ZOOM = this.minScale;
             Constants.Pinch.MAXIMUM_ZOOM = this.maxScale;
 
+            this.useBestQuality(true);
+            
             this.fromUri(getURI(this.path))
                 .defaultPage(this.page-1)
                 .swipeHorizontal(this.horizontal)
@@ -236,8 +238,7 @@ public class PdfView extends PDFView implements OnPageChangeListener,OnLoadCompl
                 .autoSpacing(this.autoSpacing)
                 .pageFling(this.pageFling)
                 .enableAnnotationRendering(this.enableAnnotationRendering)
-                .linkHandler(this)
-                .useBestQuality(true)
+                .linkHandler(this)                
                 .load();
 
         }
